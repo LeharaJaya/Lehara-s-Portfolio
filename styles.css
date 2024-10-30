@@ -2,14 +2,23 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    box-sizing: border-box;
+}
+@font-face {
+  font-family: myFirstFont;
+  src: url(sansation_light.woff);
 }
 
-.hero{
+
+.hero {
     position: relative;
     width: 100%;
     height: 100vh;
-    background: #eff4fd;
+    background: url(background_img_2.jpg) no-repeat center center fixed;
+    background-size: cover;
+    
 }
+
  
 nav{
     display: flex;
@@ -47,14 +56,18 @@ nav ul li a:hover{
 
 }
 
-.mydetel h1{
+/*attribute selector*/
+.mydetel h1[data-role="bold-name"]{
     font-size: 50px;
     color: rgb(125, 36, 125);
     margin-bottom: 60px;
 }
 
-span{
- color:#6e606e;
+
+
+
+.mydetel h1 span[data-role="gray-name"]{
+    color: #6e606e;
 }
 
 .mydetel p{
@@ -120,19 +133,155 @@ span{
     
   }
   
+  
   .social-icons img {
     width: 32px; 
     height: 32px;
     transition: transform 0.3s ease-in-out;
   }
+  
+  .social-icons a[target="_blank"] img {
+    width: 36px;
+    height: 36px;
+}
 
   .social-icons img:hover {
     transform: scale(1.4); /* Adjust the scale factor as needed */
   }
+  footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #6d3a7a;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    z-index: 10;
+}
+
+
+
+/* Container and Layout */
+.about-container {
+    
+    display: flex;
+    justify-content:center ;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    padding: 50px 20px;
+   
+    justify-content: center;
+     box-sizing: border-box;
+     gap: 20px;
+   
+    
+}
+
+.about-header h1 {
+    font-size: 50px;
+    color: #5a189a;
+    margin-bottom: 20px;
+    
+}
+.typing-effect {
+    font-size: 50px; /* Match this to your existing header size */
+    color: #5a189a;  /* Match this to your existing header color */
+    white-space: nowrap; /* Prevent line breaks */
+    overflow: hidden; /* Hide the text that is being animated */
+    border-right: 3px solid rgba(90, 25, 154, 1); /* Cursor effect */
+    width: 0; /* Initial width to create typing effect */
+    animation: typing 4s steps(10) forwards, blink-caret 0.75s step-end infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%; /* Adjust as needed for the full width of the text */
+    }
+}
+
+/* Blinking cursor animation */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent; /* Hide the caret */
+    }
+    50% {
+        border-color: rgba(90, 25, 154, 1); /* Show the caret */
+    }
+}
+
+
+/* Profile Section */
+.profile {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+
+
+
+.profile-name::before { /* Pseudo-element with generated content */
+    content: "Hello, my name is ";
+    color: #6e2774;
+    font-size: 1em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.profile-name {
+    font-size: 2em;
+    color: #6a0dad;
+    margin-top: 15px;
+}
+
+.profile-intro {
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.6;
+    margin: 10px 0 0 0;
+}
+
+/* Skills Section */
+.more-info {
+   
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    margin-top: 20px;
+    
   
+   
   
+}
+
+
+.more-info h3 {
+    font-size: 1.8em;
+    color: #5a189a;
+    margin-bottom: 15px;
+}
+
+/* Skills List with Child Combinator */
+.skills-list > li {
+    list-style-type: none;
+    color: #6a0dad;
+    font-size: 1.2em;
+    margin: 5px 0;
+    padding-left: 10px;
+}
 
 
 
+
+/* Structural Selector: First Child */
+.skills-list li:first-child {
+    font-weight: bold;
+    color: #5a189a;
+}
 
 
