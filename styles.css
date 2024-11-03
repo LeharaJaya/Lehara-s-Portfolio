@@ -28,6 +28,7 @@ nav{
     background-color: #6d3a7a;
     align-items: center;
     justify-content: space-between;
+ 
 }
 
 nav ul li {
@@ -58,9 +59,10 @@ nav ul li a:hover{
 
 /*attribute selector*/
 .mydetel h1[data-role="bold-name"]{
-    font-size: 50px;
+    font-size: calc(2rem + 2vw);
     color: rgb(125, 36, 125);
     margin-bottom: 60px;
+    
 }
 
 
@@ -157,6 +159,16 @@ nav ul li a:hover{
   .social-icons img:hover {
     transform: scale(1.4); 
   }
+  @media(max-width:768px){
+    nav ul{
+        flex-direction: column;
+    }
+    .mydetel{
+        text-align: center;
+    }
+    
+  }
+
   footer {
     width: 100%;
     text-align: center;
@@ -377,6 +389,7 @@ nav ul li a:hover{
     font-weight: 500;
     color: #222121;
     margin: 4px;
+    text-align: center;
 }
 
 
@@ -385,7 +398,6 @@ nav ul li a:hover{
     color: #9b9b9b;
     font-size: 0.9rem;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -543,4 +555,62 @@ nav ul li a:hover{
     background-color: #504757;
     width: 20px;
 }
+
+.button{
+    background: #212121;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+    margin: 3rem ;
+    border-radius: 20px;
+    
+    
+}
+.button:hover{
+    color: rgb(108, 66, 147);
+    transform: scale(0.9);
+}
+
+.contact h2{
+    font-size: 3rem;
+    text-align: center;
+    margin: 2rem 0;
+    margin-bottom: 1rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+.contact form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin: 4rem auto;
+    text-align: center;
+    
+}
+
+.contact form .input-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   
+}
+
+.contact form .input-box input,.contact form textarea{
+    width: 100%;
+    padding: 2.5rem;
+    font-size: 1rem;
+    color: #2a2a2a;
+    background: #f0edf3;
+    border-radius: 1rem;
+    border: 2px solid rgba(135, 107, 142, 0.555);
+    margin: 1.5rem 0;
+    margin-bottom: -1rem;
+    resize: none;
+    
+}
+
+
+
 
