@@ -54,6 +54,7 @@ nav ul li a:hover{
 .mydetel{
     margin-left: 8%;
     margin-top: 5%;
+    
 
 }
 
@@ -98,6 +99,7 @@ nav ul li a:hover{
     transform: scale(1.1);
 }
 
+
 .images{
     width: 45%;
     height: 70%;
@@ -124,6 +126,7 @@ nav ul li a:hover{
 }
 
 .images img{
+    max-width: 100%;
     height: 100%;
     position: absolute;
     left: 50%;
@@ -131,6 +134,20 @@ nav ul li a:hover{
     transition: bottom 1s , left 1s;
 }
 
+@media (max-width: 768px) {
+    .images {
+      width: 100%; 
+      height: auto; 
+      position: relative; 
+      bottom: 0;
+      right: 0;
+    }
+  
+    .images img {
+      position: sticky; 
+      transform: translateX(0); 
+    }
+  }
 
 .social-icons {
     position: absolute;
@@ -264,6 +281,8 @@ nav ul li a:hover{
 
 
 
+
+
 /* Structural Selector: First Child */
 .skills-list li:first-child {
     font-weight: bold;
@@ -306,6 +325,21 @@ nav ul li a:hover{
     transform: translateX(-50%);
     transition: bottom 1s , left 1s;
 }
+
+@media (max-width: 768px) {
+    .images_about {
+      width: 100%; 
+      height: auto; 
+      position: relative; 
+      bottom: 0;
+      right: 0;
+    }
+  
+    .images_about img {
+      position: sticky; 
+      transform: translateX(0); 
+    }
+  }
 
 .projectheading{
     font-size: 5rem;
