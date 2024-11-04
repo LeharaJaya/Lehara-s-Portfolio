@@ -57,14 +57,17 @@ nav ul li a:hover{
     margin-left: 8%;
     margin-top: 5%;
     
+    
 
 }
 
 /*attribute selector*/
+/* specificity */
 .mydetel h1[data-role="bold-name"]{
     font-size: calc(2rem + 2vw);/*text effects*/
     color: rgb(125, 36, 125);
     margin-bottom: 60px;
+    text-shadow: 0px 4px 10px rgba(65, 49, 62, 0.712);
     
 }
 
@@ -129,6 +132,7 @@ nav ul li a:hover{
  bottom: 7cm;
  z-index: -1;
  bottom: 40%;
+
 
 
 }
@@ -572,11 +576,11 @@ li:not(:first-child) {
 }
 
 .timeline-content{
-    background-color: #7b6ebe;
+    background-color: #7a739d;
     border: 3px solid rgb(175, 170, 203);
     padding: 30px 50px;
     border-radius: 4rem;
-    box-shadow: 0 0 10px plum;
+    box-shadow: 0 0 10px rgb(65, 53, 65);
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
